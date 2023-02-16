@@ -1,0 +1,16 @@
+{
+  "keywordFileContentHash": "A6C037699FF32A4A5AD65D53596D874F",
+  "keywordClasses": [
+    {
+      "name": "login.Login_CRM",
+      "keywordMethods": [
+        {
+          "name": "userLogin",
+          "parameters": [],
+          "javadoc": ""
+        }
+      ]
+    }
+  ],
+  "javadocParsed": true
+}
