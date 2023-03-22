@@ -25,6 +25,8 @@ WebUI.click(findTestObject('Healthians_/Healthians_'))
 
 WebUI.delay(2)
 
+WebUI.click(findTestObject('Healthians_/All_Healthians'))
+
 WebUI.setText(findTestObject('Healthians_/Search_Text'), 'rajesh.sharma1@truworth.com')
 
 WebUI.delay(2)

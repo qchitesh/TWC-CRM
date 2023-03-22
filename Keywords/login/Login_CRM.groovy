@@ -43,9 +43,11 @@ public class Login_CRM {
 
 		WebUI.setText(findTestObject('CRM_Login/Password_'), 'Truworth@!@#')
 
-		WebUI.delay(0)
+		WebUI.delay(2)
 
 		WebUI.click(findTestObject('CRM_Login/Submit_Button'))
+
+		WebUI.delay(3)
 
 		if (WebUI.verifyElementPresent(findTestObject('CRM_Login/Verify_Sussefully_Login'), 5)) {
 			System.out.println('Test case pass')

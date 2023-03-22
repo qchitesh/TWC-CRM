@@ -19,59 +19,70 @@ import org.openqa.selenium.Keys as Keys
 
 CustomKeywords.'login.Login_CRM.userLogin'()
 
-WebUI.click(findTestObject('MedpayConsultations_/MedpayConsultations'))
+WebUI.click(findTestObject('Refunds/Refunds'))
 
-WebUI.setText(findTestObject('MedpayConsultations_/Search_Tab_'), 'SPONSORED-117-45243')
+WebUI.click(findTestObject('Refunds/Refund Requests'))
 
-WebUI.click(findTestObject('MedpayConsultations_/Serach_Icon'))
+WebUI.setText(findTestObject('Refunds/Search_Box'), 'TWC-127-58A91P')
 
-if (WebUI.verifyTextPresent('Medpay Appointments', true)) {
+WebUI.click(findTestObject('Refunds/Search_Button'))
+
+if (WebUI.verifyTextPresent('TWC-127-58A91P', true)) {
+    System.out.println('Test case pass')
+} else {
+    'Test case fail'
+    assert false
+}
+
+WebUI.click(findTestObject('Refunds/View_'))
+
+if (WebUI.verifyElementPresent(findTestObject('Refunds/Check_Status'), 5)) {
     System.out.println('Test case pass')
 } else {
     System.out.println('Test case pass')
 
     assert false
 }
-
-WebUI.click(findTestObject('Object Repository/MedpayConsultations_/View_Option'))
-
-if (WebUI.verifyTextPresent('Medpay Appointment Details', true)) {
-    System.out.println('Test case pass')
-} else {
-    System.out.println('Test case fail')
-
-    assert false
-}
-
-WebUI.click(findTestObject('Object Repository/MedpayConsultations_/Presription_Tab'))
-
-WebUI.click(findTestObject('Object Repository/MedpayConsultations_/Open_Priscription'))
-
-WebUI.delay(5)
-
-WebUI.switchToWindowIndex(0)
-
-WebUI.delay(5)
-
-WebUI.click(findTestObject('MedpayConsultations_/Cross_PDF_Icon'))
-
-WebUI.delay(5)
 
 WebUI.back()
 
-WebUI.click(findTestObject('MedpayConsultations_/Clear_Arrow'))
+WebUI.back()
 
-WebUI.delay(0)
+WebUI.back()
 
-WebUI.click(findTestObject('MedpayConsultations_/Page_3'))
+WebUI.click(findTestObject('Refunds/Refunds'))
+
+WebUI.click(findTestObject('Refunds/Refund Requests'))
+
+WebUI.setText(findTestObject('Refunds/Search_Box'), 'TWC-298-4RBQEP')
 
 WebUI.delay(5)
 
-WebUI.setText(findTestObject('MedpayConsultations_/SearchTab_3_Page'), 'SPONSORED-104-94047')
+WebUI.click(findTestObject('Refunds/Search_Button_2'))
+
+WebUI.click(findTestObject('Refunds/View_'))
+
+not_run: WebUI.delay(5)
+
+not_run: WebUI.scrollToElement(findTestObject('Refunds/Refunds_Title'), 5)
 
 WebUI.delay(5)
 
-WebUI.click(findTestObject('MedpayConsultations_/Search_Icon_3'))
+WebUI.click(findTestObject('Refunds/Issue_Refund'))
 
-WebUI.click(findTestObject('MedpayConsultations_/View_Option'))
+WebUI.setText(findTestObject('Refunds/Amount_Tab'), '300')
+
+WebUI.setText(findTestObject('Refunds/Reason_Tab'), 'Personal Resaon')
+
+WebUI.click(findTestObject('Refunds/Submit_Button'))
+
+WebUI.delay(1)
+
+if (WebUI.verifyElementPresent(findTestObject('Refunds/Subnit_Verificatin'), 5)) {
+    System.out.println('User amount are already refunded')
+}
+
+WebUI.click(findTestObject('Refunds/Cancel_Button'))
+
+WebUI.closeBrowser()
 

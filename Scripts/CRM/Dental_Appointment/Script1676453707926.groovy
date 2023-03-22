@@ -27,11 +27,13 @@ WebUI.click(findTestObject('Fitternity_/Search_Icon'))
 
 WebUI.click(findTestObject('Fitternity_/eye_Icon'))
 
-test=WebUI.getText(findTestObject('Dental_Appointment_/Get_Text'))
+test = WebUI.getText(findTestObject('Dental_Appointment_/Get_Text'))
 
-System.out.println(test);
+System.out.println(test)
 
 WebUI.click(findTestObject('Fitternity_/Cross_Icon'))
 
 WebUI.back()
+
+WebUI.closeBrowser()
 

@@ -19,29 +19,57 @@ import org.openqa.selenium.Keys as Keys
 
 CustomKeywords.'login.Login_CRM.userLogin'()
 
-WebUI.delay(5)
+WebUI.click(findTestObject('Appointment_/Appointment'))
 
-WebUI.click(findTestObject('Fitternity_/Fitternity'))
+WebUI.click(findTestObject('Appointment_/View_All'))
 
-WebUI.delay(5)
+WebUI.click(findTestObject('Appointment_/Create_Appointment'), FailureHandling.STOP_ON_FAILURE)
 
-WebUI.setText(findTestObject('Fitternity_/Serach_Tab'), 'lokesh20@mailinator.com')
+WebUI.setText(findTestObject('Appointement_Create/Search_User'), 'hitesh.chandankar@truworth.com')
 
-WebUI.click(findTestObject('Fitternity_/Search_Icon'))
+WebUI.click(findTestObject('Appointment_/Search_Button'))
 
-WebUI.click(findTestObject('Fitternity_/eye_Icon'))
+WebUI.delay(10)
 
-if (WebUI.verifyElementPresent(findTestObject('Fitternity_/Verify_Element'), 5)) {
-    System.out.println('Test case pass')
+if (WebUI.verifyElementPresent(findTestObject('Appointement_Create/Verify_User'), 5)) {
+    System.out.println('User is verified')
 } else {
-    System.out.println('Test case fail')
+    System.out.println('User is not verified')
+}
+
+WebUI.delay(2)
+
+WebUI.setText(findTestObject('Appointement_Create/Search_Pacakage'), 'covid')
+
+WebUI.delay(5)
+
+WebUI.click(findTestObject('Appointement_Create/Select_DropDown_Package'))
+
+WebUI.delay(2)
+
+WebUI.click(findTestObject('Appointement_Create/Self_'))
+
+WebUI.click(findTestObject('Appointement_Create/Address_'))
+
+WebUI.click(findTestObject('Appointement_Create/Date_'))
+
+WebUI.click(findTestObject('Appointement_Create/Select_Date'))
+
+WebUI.click(findTestObject('Appointement_Create/Time_'))
+
+WebUI.click(findTestObject('Appointement_Create/Select_Time'))
+
+WebUI.click(findTestObject('Appointement_Create/Submit'))
+
+if (WebUI.verifyTextPresent('Hitesh Chandankar', true)) {
+    System.out.println('User Verified')
+} else {
+    System.out.println('User not verified')
 
     assert false
 }
 
-WebUI.click(findTestObject('Object Repository/Fitternity_/Cross_Icon'))
-
-WebUI.back()
+WebUI.delay(2)
 
 WebUI.closeBrowser()
 

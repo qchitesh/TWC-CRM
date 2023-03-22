@@ -38,20 +38,29 @@ WebUI.delay(2)
 WebUI.click(findTestObject('Appointment_/Create_Appointment'))
 
 if (WebUI.verifyTextPresent('Create Appointment', false)) {
- System.out.println('Test case pass')
-} else
-	 {    System.out.println('Test case fail')
+    System.out.println('Test case pass')
+} else {
+    System.out.println('Test case fail')
 
- assert false
+    assert false
 }
+
 WebUI.delay(2)
 
 WebUI.setText(findTestObject('Appointment_/Enter_Email'), 'hitesh@gmail.com')
 
 WebUI.delay(2)
 
-WebUI.click(findTestObject('Appointment_/Search_New_User'))
+if (WebUI.click(findTestObject('Appointment_/Search_New_User'))) {
+    System.out.println('Test case pass')
+}
 
+//else
+//{
+//	WebUI.delay(15)
+//	WebUI.verifyTextPresent("Something went wrong", true)
+//	System.out.println("Something went wrong == API not working")
+//}
 WebUI.delay(2)
 
 WebUI.click(findTestObject('Appointment_/Yes_New_User'))
@@ -111,27 +120,30 @@ WebUI.click(findTestObject('Appointment_/Register_Button_NewUser'))
 WebUI.delay(2)
 
 if (WebUI.verifyElementPresent(findTestObject('Appointment_/Verify_Account_Alerdy_Created'), 5)) {
- System.out.println('Test case fail')
+    System.out.println('Test case fail')
 } else {
     System.out.println('Test case fail')
 
-   assert false
+    assert false
 }
+
 WebUI.delay(5)
 
 WebUI.click(findTestObject('Appointment_/Cross_NewUser'))
 
-WebUI.delay(5)
-
 WebUI.click(findTestObject('Object Repository/Appointment_/Back_Arrow_Dashboard'))
 
-WebUI.delay(5)
+WebUI.delay(10)
+
+WebUI.click(findTestObject('Appointment_/User_Verify'))
 
 WebUI.click(findTestObject('Appointment_/Appointment'))
 
 WebUI.delay(2)
 
 WebUI.click(findTestObject('Appointment_/Advanced_Filter'))
+
+WebUI.delay(5)
 
 WebUI.delay(2)
 

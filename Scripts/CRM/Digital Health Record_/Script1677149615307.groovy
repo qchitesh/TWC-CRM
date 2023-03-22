@@ -19,19 +19,33 @@ import org.openqa.selenium.Keys as Keys
 
 CustomKeywords.'login.Login_CRM.userLogin'()
 
-WebUI.delay(5)
+WebUI.click(findTestObject('Digital Health Record/Digital Health Record_'))
 
-WebUI.click(findTestObject('Fitternity_/Fitternity'))
+WebUI.click(findTestObject('Digital Health Record/Convert'))
 
-WebUI.delay(5)
+test = WebUI.setText(findTestObject('Digital Health Record/Enter_Value'), '10')
 
-WebUI.setText(findTestObject('Fitternity_/Serach_Tab'), 'lokesh20@mailinator.com')
+WebUI.verifyElementPresent(findTestObject('Object Repository/Digital Health Record/Enter_Value'), 5)
 
-WebUI.click(findTestObject('Fitternity_/Search_Icon'))
+WebUI.setText(findTestObject('Digital Health Record/Min_Value'), '1')
 
-WebUI.click(findTestObject('Fitternity_/eye_Icon'))
+WebUI.setText(findTestObject('Digital Health Record/Max_value'), '10')
 
-if (WebUI.verifyElementPresent(findTestObject('Fitternity_/Verify_Element'), 5)) {
+WebUI.setText(findTestObject('Digital Health Record/unit_Value'), 'Primary')
+
+WebUI.setText(findTestObject('Digital Health Record/Enter-Value_2'), '7')
+
+WebUI.setText(findTestObject('Digital Health Record/Min_Value_2'), '0')
+
+WebUI.setText(findTestObject('Digital Health Record/Max_Value_2'), '10')
+
+WebUI.setText(findTestObject('Digital Health Record/Unit_Value_2'), 'Secoundary')
+
+WebUI.setText(findTestObject('Digital Health Record/Set_Value'), 'Positive')
+
+WebUI.setText(findTestObject('Digital Health Record/Unit_Value_3'), 'quaternary')
+
+if (WebUI.verifyElementClickable(findTestObject('Digital Health Record/save_Button'))) {
     System.out.println('Test case pass')
 } else {
     System.out.println('Test case fail')
@@ -39,9 +53,7 @@ if (WebUI.verifyElementPresent(findTestObject('Fitternity_/Verify_Element'), 5))
     assert false
 }
 
-WebUI.click(findTestObject('Object Repository/Fitternity_/Cross_Icon'))
-
-WebUI.back()
+WebUI.click(findTestObject('Digital Health Record/save_Button'))
 
 WebUI.closeBrowser()
 

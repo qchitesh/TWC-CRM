@@ -19,7 +19,13 @@ import org.openqa.selenium.Keys as Keys
 
 CustomKeywords.'login.Login_CRM.userLogin'()
 
+WebUI.maximizeWindow()
+
+WebUI.delay(5)
+
 WebUI.click(findTestObject('LAB_/Lab_'))
+
+WebUI.click(findTestObject('LAB_/All_Lab'))
 
 WebUI.click(findTestObject('LAB_/Create_Lab'))
 
@@ -31,9 +37,11 @@ WebUI.setText(findTestObject('LAB_/NT_Code'), 'Lab007')
 
 WebUI.setText(findTestObject('LAB_/Parent_Code'), '125')
 
+WebUI.delay(5)
+
 WebUI.click(findTestObject('LAB_/Select_State'))
 
-WebUI.click(findTestObject('LAB_/Select_State_2'))
+WebUI.click(findTestObject('LAB_/Select_State_2'), FailureHandling.STOP_ON_FAILURE)
 
 WebUI.click(findTestObject('LAB_/Select_City'))
 
@@ -71,5 +79,7 @@ WebUI.click(findTestObject('LAB_/Ok_End_Button'))
 
 WebUI.click(findTestObject('LAB_/Submit_Button'))
 
-WebUI.click(findTestObject('LAB_/Delete_Button'))
+not_run: WebUI.click(findTestObject('LAB_/Delete_Button'))
+
+WebUI.closeBrowser()
 

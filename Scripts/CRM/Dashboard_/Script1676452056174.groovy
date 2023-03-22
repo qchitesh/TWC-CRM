@@ -35,3 +35,5 @@ WebUI.delay(4)
 
 WebUI.click(findTestObject('DashBoard_/DashBoard'))
 
+WebUI.closeBrowser()
+

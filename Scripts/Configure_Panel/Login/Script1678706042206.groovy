@@ -17,31 +17,11 @@ import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 
-CustomKeywords.'login.Login_CRM.userLogin'()
+WebUI.openBrowser('')
 
-WebUI.delay(5)
+WebUI.maximizeWindow()
 
-WebUI.click(findTestObject('Fitternity_/Fitternity'))
+WebUI.navigateToUrl('https://dev-config.thewellnesscorner.com/')
 
-WebUI.delay(5)
-
-WebUI.setText(findTestObject('Fitternity_/Serach_Tab'), 'lokesh20@mailinator.com')
-
-WebUI.click(findTestObject('Fitternity_/Search_Icon'))
-
-WebUI.click(findTestObject('Fitternity_/eye_Icon'))
-
-if (WebUI.verifyElementPresent(findTestObject('Fitternity_/Verify_Element'), 5)) {
-    System.out.println('Test case pass')
-} else {
-    System.out.println('Test case fail')
-
-    assert false
-}
-
-WebUI.click(findTestObject('Object Repository/Fitternity_/Cross_Icon'))
-
-WebUI.back()
-
-WebUI.closeBrowser()
+WebUI.setText(findTestObject(null), '')
 

@@ -19,29 +19,37 @@ import org.openqa.selenium.Keys as Keys
 
 CustomKeywords.'login.Login_CRM.userLogin'()
 
+WebUI.click(findTestObject('LAB_/Lab_'))
+
+WebUI.click(findTestObject('Lab_Network/Lab_Network'))
+
+WebUI.click(findTestObject('Lab_Network/Add_Network'))
+
+WebUI.setText(findTestObject('Lab_Network/Network_Name'), 'DonteBlood')
+
+WebUI.click(findTestObject('Lab_Network/Submit_Button'))
+
 WebUI.delay(5)
 
-WebUI.click(findTestObject('Fitternity_/Fitternity'))
+WebUI.click(findTestObject('Lab_Network/Eye-Symbol_Lab'))
 
-WebUI.delay(5)
+WebUI.click(findTestObject('Lab_Network/Add_Lab'))
 
-WebUI.setText(findTestObject('Fitternity_/Serach_Tab'), 'lokesh20@mailinator.com')
+WebUI.setText(findTestObject('Lab_Network/Lab_Name'), 'new testing lab')
 
-WebUI.click(findTestObject('Fitternity_/Search_Icon'))
+WebUI.click(findTestObject('Lab_Network/Lab_DropDown'), FailureHandling.STOP_ON_FAILURE)
 
-WebUI.click(findTestObject('Fitternity_/eye_Icon'))
+WebUI.click(findTestObject('Lab_Network/Submit_Button_2'))
 
-if (WebUI.verifyElementPresent(findTestObject('Fitternity_/Verify_Element'), 5)) {
-    System.out.println('Test case pass')
-} else {
-    System.out.println('Test case fail')
+WebUI.delay(2)
 
-    assert false
+if(WebUI.verifyTextPresent('New testing lab', true))
+{
+	System.out.println("Test case pass")
 }
-
-WebUI.click(findTestObject('Object Repository/Fitternity_/Cross_Icon'))
-
-WebUI.back()
-
-WebUI.closeBrowser()
-
+else
+{
+	System.out.println("Test case fail")
+	assert false
+}
+ WebUI.closeBrowser()

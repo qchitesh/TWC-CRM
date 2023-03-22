@@ -19,27 +19,33 @@ import org.openqa.selenium.Keys as Keys
 
 CustomKeywords.'login.Login_CRM.userLogin'()
 
-WebUI.delay(5)
+WebUI.click(findTestObject('Healthians_/Healthians_'))
 
-WebUI.click(findTestObject('Fitternity_/Fitternity'))
+WebUI.click(findTestObject('Healthians_Failed_Orders/Failed_Orders'))
 
-WebUI.delay(5)
+WebUI.click(findTestObject('Healthians_Failed_Orders/Eye_Icon'))
 
-WebUI.setText(findTestObject('Fitternity_/Serach_Tab'), 'lokesh20@mailinator.com')
+//if (WebUI.getText(findTestObject('Healthians_Failed_Orders/Text_Verify'))) {
+//    System.out.println('Test case pass')
+//} else {
+//    'Test case fail'
+//    assert false
+//}
+WebUI.click(findTestObject('Object Repository/Healthians_Failed_Orders/Reschedule_'))
 
-WebUI.click(findTestObject('Fitternity_/Search_Icon'))
+WebUI.click(findTestObject('Healthians_Failed_Orders/Date_Symbol'))
 
-WebUI.click(findTestObject('Fitternity_/eye_Icon'))
+WebUI.click(findTestObject('Healthians_Failed_Orders/Year_Symbol'))
 
-if (WebUI.verifyElementPresent(findTestObject('Fitternity_/Verify_Element'), 5)) {
-    System.out.println('Test case pass')
-} else {
-    System.out.println('Test case fail')
+WebUI.click(findTestObject('Healthians_Failed_Orders/Year_Symbol_2'))
 
-    assert false
-}
+WebUI.click(findTestObject('Healthians_Failed_Orders/Date_'))
 
-WebUI.click(findTestObject('Object Repository/Fitternity_/Cross_Icon'))
+WebUI.click(findTestObject('Healthians_Failed_Orders/Cross_Icon'))
+
+WebUI.back()
+
+WebUI.back()
 
 WebUI.back()
 

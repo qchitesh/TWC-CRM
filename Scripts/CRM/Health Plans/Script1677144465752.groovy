@@ -19,29 +19,17 @@ import org.openqa.selenium.Keys as Keys
 
 CustomKeywords.'login.Login_CRM.userLogin'()
 
-WebUI.delay(5)
+WebUI.click(findTestObject('Health_Plans/Health_Plan'))
 
-WebUI.click(findTestObject('Fitternity_/Fitternity'))
+WebUI.click(findTestObject('Health_Plans/Enroll_User_To'))
 
-WebUI.delay(5)
+WebUI.setText(findTestObject('Health_Plans/Enter_Email'), 'hitesh@truworth.com')
 
-WebUI.setText(findTestObject('Fitternity_/Serach_Tab'), 'lokesh20@mailinator.com')
+WebUI.click(findTestObject('Health_Plans/Select_Plans'), FailureHandling.STOP_ON_FAILURE)
 
-WebUI.click(findTestObject('Fitternity_/Search_Icon'))
+WebUI.click(findTestObject('Health_Plans/Select_Plans_'))
 
-WebUI.click(findTestObject('Fitternity_/eye_Icon'))
-
-if (WebUI.verifyElementPresent(findTestObject('Fitternity_/Verify_Element'), 5)) {
-    System.out.println('Test case pass')
-} else {
-    System.out.println('Test case fail')
-
-    assert false
-}
-
-WebUI.click(findTestObject('Object Repository/Fitternity_/Cross_Icon'))
-
-WebUI.back()
+WebUI.click(findTestObject('Health_Plans/Submit_Button'))
 
 WebUI.closeBrowser()
 

@@ -23,15 +23,23 @@ WebUI.maximizeWindow()
 
 WebUI.navigateToUrl(GlobalVariable.url)
 
-WebUI.click(findTestObject('CRM_Login/Submit_Button'))
+WebUI.delay(5)
 
-alert = WebUI.getText(findTestObject('CRM_Login/Alert_Login'))
-
-System.out.println(alert)
-
-alert07 = WebUI.getText(findTestObject('CRM_Login/Alert_password'))
-
-System.out.println(alert07)
+//WebUI.click(findTestObject('CRM__/CRM_Login/Page_CRM - The Wellness Corner/button_Log in'))
+//
+//WebUI.delay(2)
+//
+//alert = WebUI.getText(findTestObject('CRM_Login/Alert_Login'))
+//
+//WebUI.delay(2)
+//
+//System.out.println(alert)
+//
+//alert07 = WebUI.getText(findTestObject('CRM_Login/Alert_password'))
+//
+//System.out.println(alert07)
+//
+//WebUI.delay(5)
 
 WebUI.setText(findTestObject('CRM_Login/Login_'), 'admin')
 
@@ -39,7 +47,7 @@ WebUI.delay(2)
 
 WebUI.setText(findTestObject('CRM_Login/Password_'), 'Truworth@!@#')
 
-WebUI.delay(0)
+WebUI.delay(2)
 
 WebUI.click(findTestObject('CRM_Login/Submit_Button'))
 
@@ -51,5 +59,5 @@ if (WebUI.verifyElementPresent(findTestObject('CRM_Login/Verify_Sussefully_Login
     assert false
 }
 
-
+WebUI.closeBrowser()
 

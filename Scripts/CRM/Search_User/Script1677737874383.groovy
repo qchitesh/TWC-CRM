@@ -19,19 +19,15 @@ import org.openqa.selenium.Keys as Keys
 
 CustomKeywords.'login.Login_CRM.userLogin'()
 
-WebUI.delay(5)
+WebUI.click(findTestObject('Search_User/Search_User'))
 
-WebUI.click(findTestObject('Fitternity_/Fitternity'))
+WebUI.setText(findTestObject('Search_User/Search_Name'), 'hitesh.chandankar@truworth.com')
 
-WebUI.delay(5)
+WebUI.delay(2)
 
-WebUI.setText(findTestObject('Fitternity_/Serach_Tab'), 'lokesh20@mailinator.com')
+WebUI.click(findTestObject('Search_User/Search_Icon_Button'))
 
-WebUI.click(findTestObject('Fitternity_/Search_Icon'))
-
-WebUI.click(findTestObject('Fitternity_/eye_Icon'))
-
-if (WebUI.verifyElementPresent(findTestObject('Fitternity_/Verify_Element'), 5)) {
+if (WebUI.verifyTextPresent('Hitesh Chandankar', true)) {
     System.out.println('Test case pass')
 } else {
     System.out.println('Test case fail')
@@ -39,9 +35,31 @@ if (WebUI.verifyElementPresent(findTestObject('Fitternity_/Verify_Element'), 5))
     assert false
 }
 
-WebUI.click(findTestObject('Object Repository/Fitternity_/Cross_Icon'))
+WebUI.delay(2)
 
-WebUI.back()
+if (WebUI.verifyElementPresent(findTestObject('Search_User/Status_Active'), 5)) {
+    System.out.println('User are Active')
+} else {
+    System.out.println('User not Actived')
+}
+
+WebUI.click(findTestObject('Search_User/eye_Symbol'))
+
+if (WebUI.verifyElementPresent(findTestObject('Search_User/HRA_Status'), 5)) {
+    System.out.println('User HRA Fullfill')
+} else
+	 {
+    System.out.println('User HRA Not Fullfill ')
+}
+
+if(WebUI.verifyElementPresent(findTestObject('Object Repository/Search_User/Email_Status'), 5))
+{
+	System.out.println("User Email verified")
+}
+else
+{
+	System.out.println("User Email not verified")
+}
 
 WebUI.closeBrowser()
 
