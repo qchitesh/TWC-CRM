@@ -35,7 +35,7 @@ WebUI.click(findTestObject('Appointment_/Search_Button'))
 
 WebUI.delay(2)
 
-WebUI.click(findTestObject('Appointment_/Create_Appointment'))
+WebUI.click(findTestObject('Appointment_/Create_Appointment_/Create_Appointment'))
 
 if (WebUI.verifyTextPresent('Create Appointment', false)) {
     System.out.println('Test case pass')
@@ -133,9 +133,9 @@ WebUI.click(findTestObject('Appointment_/Cross_NewUser'))
 
 WebUI.click(findTestObject('Object Repository/Appointment_/Back_Arrow_Dashboard'))
 
-WebUI.delay(10)
+WebUI.delay(5)
 
-WebUI.click(findTestObject('Appointment_/User_Verify'))
+not_run: WebUI.click(findTestObject('Appointment_/User_Verify'))
 
 WebUI.click(findTestObject('Appointment_/Appointment'))
 

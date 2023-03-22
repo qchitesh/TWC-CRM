@@ -23,9 +23,9 @@ WebUI.click(findTestObject('Appointment_/Appointment'))
 
 WebUI.click(findTestObject('Appointment_/View_All'))
 
-WebUI.click(findTestObject('Appointment_/Create_Appointment'), FailureHandling.STOP_ON_FAILURE)
+WebUI.click(findTestObject('Appointment_/Create_Appointment_/Create_Appointment'), FailureHandling.STOP_ON_FAILURE)
 
-WebUI.setText(findTestObject('Appointement_Create/Search_User'), 'hitesh.chandankar@truworth.com')
+WebUI.setText(findTestObject('Appointment_/Create_Appointment_/Search_User_'), 'hitesh.chandankar@truworth.com')
 
 WebUI.click(findTestObject('Appointment_/Search_Button'))
 
