@@ -1,16 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>Search_Button_2</name>
+   <name>View_1</name>
    <tag></tag>
-   <elementGuidId>7aeaa388-ce0c-42a5-b4d3-2217b27cef1c</elementGuidId>
+   <elementGuidId>b4e770ea-b005-44e6-b122-61bac4f579e0</elementGuidId>
    <selectorCollection>
       <entry>
          <key>BASIC</key>
+         <value></value>
       </entry>
       <entry>
          <key>XPATH</key>
-         <value>//button[@class=&quot;ant-btn ant-btn-primary ant-input-search-button&quot;]</value>
+         <value>(//button[@class=&quot;ant-btn ant-btn-link&quot;]/span[text()=&quot;View All&quot;])[1]</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>

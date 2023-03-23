@@ -75,3 +75,5 @@ WebUI.click(findTestObject('MedpayConsultations_/Search_Icon_3'))
 
 WebUI.click(findTestObject('MedpayConsultations_/View_Option'))
 
+WebUI.closeBrowser()
+

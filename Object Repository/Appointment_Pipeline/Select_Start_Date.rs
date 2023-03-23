@@ -1,16 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>Search_Button_2</name>
+   <name>Select_Start_Date</name>
    <tag></tag>
-   <elementGuidId>7aeaa388-ce0c-42a5-b4d3-2217b27cef1c</elementGuidId>
+   <elementGuidId>6a8d16ea-9568-4822-8d01-5376cb7fd6ec</elementGuidId>
    <selectorCollection>
       <entry>
          <key>BASIC</key>
+         <value></value>
       </entry>
       <entry>
          <key>XPATH</key>
-         <value>//button[@class=&quot;ant-btn ant-btn-primary ant-input-search-button&quot;]</value>
+         <value>//input[@id=&quot;dateRange&quot;]</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>

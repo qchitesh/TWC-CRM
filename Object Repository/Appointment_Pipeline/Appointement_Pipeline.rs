@@ -1,16 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>Search_Button_2</name>
+   <name>Appointement_Pipeline</name>
    <tag></tag>
-   <elementGuidId>7aeaa388-ce0c-42a5-b4d3-2217b27cef1c</elementGuidId>
+   <elementGuidId>15f8c44f-1225-4da4-99d8-9a3cb9ddc3a0</elementGuidId>
    <selectorCollection>
       <entry>
          <key>BASIC</key>
+         <value></value>
       </entry>
       <entry>
          <key>XPATH</key>
-         <value>//button[@class=&quot;ant-btn ant-btn-primary ant-input-search-button&quot;]</value>
+         <value>//a[text()=&quot;Appointments Pipeline&quot;]</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>

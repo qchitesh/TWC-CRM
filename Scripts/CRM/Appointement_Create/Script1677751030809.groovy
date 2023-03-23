@@ -31,7 +31,7 @@ WebUI.click(findTestObject('Appointment_/Search_Button'))
 
 WebUI.delay(10)
 
-if (WebUI.verifyElementPresent(findTestObject('Appointement_Create/Verify_User'), 5)) {
+if (WebUI.verifyElementPresent(findTestObject('Object Repository/Appointement_Create/Verify_User'), 5)) {
     System.out.println('User is verified')
 } else {
     System.out.println('User is not verified')
@@ -39,9 +39,9 @@ if (WebUI.verifyElementPresent(findTestObject('Appointement_Create/Verify_User')
 
 WebUI.delay(2)
 
-WebUI.setText(findTestObject('Appointement_Create/Search_Pacakage'), 'covid')
+WebUI.setText(findTestObject('Object Repository/Appointement_Create/Search_Pacakage'), 'covid')
 
-WebUI.delay(5)
+WebUI.delay(2)
 
 WebUI.click(findTestObject('Appointement_Create/Select_DropDown_Package'))
 

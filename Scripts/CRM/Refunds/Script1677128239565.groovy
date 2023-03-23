@@ -48,19 +48,23 @@ WebUI.back()
 
 WebUI.back()
 
-WebUI.back()
+not_run: WebUI.back()
+
+WebUI.delay(2)
 
 WebUI.click(findTestObject('Refunds/Refunds'))
 
-WebUI.click(findTestObject('Refunds/Refund Requests'))
+WebUI.delay(2)
+
+WebUI.click(findTestObject('Refunds/Submit_Request'))
 
 WebUI.setText(findTestObject('Refunds/Search_Box'), 'TWC-298-4RBQEP')
 
-WebUI.delay(5)
+WebUI.delay(2)
 
 WebUI.click(findTestObject('Refunds/Search_Button_2'))
 
-WebUI.click(findTestObject('Refunds/View_'))
+not_run: WebUI.click(findTestObject('Refunds/View_'))
 
 not_run: WebUI.delay(5)
 
