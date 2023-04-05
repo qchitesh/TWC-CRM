@@ -21,25 +21,45 @@ CustomKeywords.'login.Login_CRM.userLogin'()
 
 WebUI.delay(2)
 
-WebUI.click(findTestObject('Appointment_Pipeline/Appointement_Pipeline'))
+WebUI.click(findTestObject('CRM_/CRM_Login/Open_Slider'), FailureHandling.OPTIONAL)
 
 WebUI.delay(2)
 
-WebUI.click(findTestObject('Appointment_Pipeline/Select_Start_Date'))
+WebUI.click(findTestObject('CRM_/Appointment_Pipeline/Appointement_Pipeline'))
 
 WebUI.delay(2)
 
-WebUI.click(findTestObject('Appointment_Pipeline/Start_Date'))
+WebUI.click(findTestObject('CRM_/Appointment_Pipeline/Select_Start_Date'))
 
 WebUI.delay(2)
 
-WebUI.click(findTestObject('Appointment_Pipeline/End_Date'))
+WebUI.click(findTestObject('CRM_/Appointment_Pipeline/Start_Date'))
 
 WebUI.delay(2)
 
-WebUI.click(findTestObject('Appointment_Pipeline/Submit_Button'))
+WebUI.click(findTestObject('CRM_/Appointment_Pipeline/End_Date'))
 
 WebUI.delay(2)
 
-WebUI.click(findTestObject('Appointment_Pipeline/View_1'))
+WebUI.click(findTestObject('CRM_/Appointment_Pipeline/Submit_Button'))
+
+WebUI.delay(2)
+
+WebUI.click(findTestObject('CRM_/Appointment_Pipeline/View_1'))
+
+WebUI.delay(2)
+
+WebUI.click(findTestObject('CRM_/Appointment_Pipeline/Assign_Partner'))
+
+WebUI.delay(2)
+
+WebUI.click(findTestObject('CRM_/Appointment_Pipeline/Click_Assign_Partner'))
+
+WebUI.click(findTestObject('CRM_/Appointment_Pipeline/TATA 1MG'))
+
+WebUI.setText(findTestObject('CRM_/Appointment_Pipeline/Booking_ID'), 'TATA_100')
+
+WebUI.click(findTestObject('CRM_/Appointment_Pipeline/Submit_'))
+
+WebUI.closeBrowser()
 

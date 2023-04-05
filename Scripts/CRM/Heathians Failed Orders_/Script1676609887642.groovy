@@ -19,29 +19,35 @@ import org.openqa.selenium.Keys as Keys
 
 CustomKeywords.'login.Login_CRM.userLogin'()
 
-WebUI.click(findTestObject('Healthians_/Healthians_'))
+WebUI.delay(2)
 
-WebUI.click(findTestObject('Healthians_Failed_Orders/Failed_Orders'))
+WebUI.click(findTestObject('CRM_/CRM_Login/Open_Slider'), FailureHandling.OPTIONAL)
 
-WebUI.click(findTestObject('Healthians_Failed_Orders/Eye_Icon'))
+WebUI.delay(2)
 
-//if (WebUI.getText(findTestObject('Healthians_Failed_Orders/Text_Verify'))) {
+WebUI.click(findTestObject('CRM_/Healthians_/Healthians_'))
+
+WebUI.click(findTestObject('CRM_/Healthians_Failed_Orders/Failed_Orders'))
+
+WebUI.click(findTestObject('CRM_/Healthians_Failed_Orders/Eye_Icon'))
+
+//if (WebUI.getText(findTestObject('CRM_/Healthians_Failed_Orders/Text_Verify'))) {
 //    System.out.println('Test case pass')
 //} else {
 //    'Test case fail'
 //    assert false
 //}
-WebUI.click(findTestObject('Object Repository/Healthians_Failed_Orders/Reschedule_'))
+WebUI.click(findTestObject('Object Repository/CRM_/Healthians_Failed_Orders/Reschedule_'))
 
-WebUI.click(findTestObject('Healthians_Failed_Orders/Date_Symbol'))
+WebUI.click(findTestObject('CRM_/Healthians_Failed_Orders/Date_Symbol'))
 
-WebUI.click(findTestObject('Healthians_Failed_Orders/Year_Symbol'))
+WebUI.click(findTestObject('CRM_/Healthians_Failed_Orders/Year_Symbol'))
 
-WebUI.click(findTestObject('Healthians_Failed_Orders/Year_Symbol_2'))
+WebUI.click(findTestObject('CRM_/Healthians_Failed_Orders/Year_Symbol_2'))
 
-WebUI.click(findTestObject('Healthians_Failed_Orders/Date_'))
+WebUI.click(findTestObject('CRM_/Healthians_Failed_Orders/Date_'))
 
-WebUI.click(findTestObject('Healthians_Failed_Orders/Cross_Icon'))
+WebUI.click(findTestObject('CRM_/Healthians_Failed_Orders/Cross_Icon'))
 
 WebUI.back()
 

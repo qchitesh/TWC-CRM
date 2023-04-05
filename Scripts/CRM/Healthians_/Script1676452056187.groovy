@@ -21,29 +21,33 @@ CustomKeywords.'login.Login_CRM.userLogin'()
 
 WebUI.delay(2)
 
-WebUI.click(findTestObject('Healthians_/Healthians_'))
+WebUI.click(findTestObject('CRM_/CRM_Login/Open_Slider'), FailureHandling.OPTIONAL)
 
 WebUI.delay(2)
 
-WebUI.click(findTestObject('Healthians_/All_Healthians'))
-
-WebUI.setText(findTestObject('Healthians_/Search_Text'), 'rajesh.sharma1@truworth.com')
+WebUI.click(findTestObject('CRM_/Healthians_/Healthians_'))
 
 WebUI.delay(2)
 
-WebUI.click(findTestObject('Healthians_/Search_Button'))
+WebUI.click(findTestObject('CRM_/Healthians_/All_Healthians'))
+
+WebUI.setText(findTestObject('CRM_/Healthians_/Search_Text'), 'rajesh.sharma1@truworth.com')
 
 WebUI.delay(2)
 
-WebUI.click(findTestObject('Healthians_/Eye_Symbol'))
+WebUI.click(findTestObject('CRM_/Healthians_/Search_Button'))
+
+WebUI.delay(2)
+
+WebUI.click(findTestObject('CRM_/Healthians_/Eye_Symbol'))
 
 WebUI.delay(5)
 
-WebUI.click(findTestObject('Healthians_/TitleVerify'))
+WebUI.click(findTestObject('CRM_/Healthians_/TitleVerify'))
 
 WebUI.verifyTextPresent('Healthians Order Details', true)
 
-if (WebUI.verifyElementPresent(findTestObject('Healthians_/VerifyUser'), 5)) {
+if (WebUI.verifyElementPresent(findTestObject('CRM_/Healthians_/VerifyUser'), 5)) {
     System.out.println('Test case pass')
 } else {
     System.out.println('Test case fail')

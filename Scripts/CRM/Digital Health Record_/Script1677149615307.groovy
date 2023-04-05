@@ -19,33 +19,39 @@ import org.openqa.selenium.Keys as Keys
 
 CustomKeywords.'login.Login_CRM.userLogin'()
 
-WebUI.click(findTestObject('Digital Health Record/Digital Health Record_'))
+WebUI.delay(2)
 
-WebUI.click(findTestObject('Digital Health Record/Convert'))
+WebUI.click(findTestObject('CRM_/CRM_Login/Open_Slider'), FailureHandling.OPTIONAL)
 
-test = WebUI.setText(findTestObject('Digital Health Record/Enter_Value'), '10')
+WebUI.delay(2)
 
-WebUI.verifyElementPresent(findTestObject('Object Repository/Digital Health Record/Enter_Value'), 5)
+WebUI.click(findTestObject('CRM_/Digital Health Record/Digital Health Record_'))
 
-WebUI.setText(findTestObject('Digital Health Record/Min_Value'), '1')
+WebUI.click(findTestObject('CRM_/Digital Health Record/Convert'))
 
-WebUI.setText(findTestObject('Digital Health Record/Max_value'), '10')
+test = WebUI.setText(findTestObject('CRM_/Digital Health Record/Enter_Value'), '10')
 
-WebUI.setText(findTestObject('Digital Health Record/unit_Value'), 'Primary')
+WebUI.verifyElementPresent(findTestObject('Object Repository/CRM_/Digital Health Record/Enter_Value'), 5)
 
-WebUI.setText(findTestObject('Digital Health Record/Enter-Value_2'), '7')
+WebUI.setText(findTestObject('CRM_/Digital Health Record/Min_Value'), '1')
 
-WebUI.setText(findTestObject('Digital Health Record/Min_Value_2'), '0')
+WebUI.setText(findTestObject('CRM_/Digital Health Record/Max_value'), '10')
 
-WebUI.setText(findTestObject('Digital Health Record/Max_Value_2'), '10')
+WebUI.setText(findTestObject('CRM_/Digital Health Record/unit_Value'), 'Primary')
 
-WebUI.setText(findTestObject('Digital Health Record/Unit_Value_2'), 'Secoundary')
+WebUI.setText(findTestObject('CRM_/Digital Health Record/Enter-Value_2'), '7')
 
-WebUI.setText(findTestObject('Digital Health Record/Set_Value'), 'Positive')
+WebUI.setText(findTestObject('CRM_/Digital Health Record/Min_Value_2'), '0')
 
-WebUI.setText(findTestObject('Digital Health Record/Unit_Value_3'), 'quaternary')
+WebUI.setText(findTestObject('CRM_/Digital Health Record/Max_Value_2'), '10')
 
-if (WebUI.verifyElementClickable(findTestObject('Digital Health Record/save_Button'))) {
+WebUI.setText(findTestObject('CRM_/Digital Health Record/Unit_Value_2'), 'Secoundary')
+
+WebUI.setText(findTestObject('CRM_/Digital Health Record/Set_Value'), 'Positive')
+
+WebUI.setText(findTestObject('CRM_/Digital Health Record/Unit_Value_3'), 'quaternary')
+
+if (WebUI.verifyElementClickable(findTestObject('CRM_/Digital Health Record/save_Button'))) {
     System.out.println('Test case pass')
 } else {
     System.out.println('Test case fail')
@@ -53,7 +59,7 @@ if (WebUI.verifyElementClickable(findTestObject('Digital Health Record/save_Butt
     assert false
 }
 
-WebUI.click(findTestObject('Digital Health Record/save_Button'))
+WebUI.click(findTestObject('CRM_/Digital Health Record/save_Button'))
 
 WebUI.closeBrowser()
 

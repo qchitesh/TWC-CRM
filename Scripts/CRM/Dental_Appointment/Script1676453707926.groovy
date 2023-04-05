@@ -19,19 +19,25 @@ import org.openqa.selenium.Keys as Keys
 
 CustomKeywords.'login.Login_CRM.userLogin'()
 
-WebUI.click(findTestObject('Dental_Appointment_/Dental_Appointment'))
+WebUI.delay(2)
 
-WebUI.setText(findTestObject('Fitternity_/Serach_Tab'), '15918')
+WebUI.click(findTestObject('CRM_/CRM_Login/Open_Slider'), FailureHandling.OPTIONAL)
 
-WebUI.click(findTestObject('Fitternity_/Search_Icon'))
+WebUI.delay(2)
 
-WebUI.click(findTestObject('Fitternity_/eye_Icon'))
+WebUI.click(findTestObject('CRM_/Dental_Appointment_/Dental_Appointment'))
 
-test = WebUI.getText(findTestObject('Dental_Appointment_/Get_Text'))
+WebUI.setText(findTestObject('CRM_/Fitternity_/Serach_Tab'), '15918')
+
+WebUI.click(findTestObject('CRM_/Fitternity_/Search_Icon'))
+
+WebUI.click(findTestObject('CRM_/Fitternity_/eye_Icon'))
+
+test = WebUI.getText(findTestObject('CRM_/Dental_Appointment_/Get_Text'))
 
 System.out.println(test)
 
-WebUI.click(findTestObject('Fitternity_/Cross_Icon'))
+WebUI.click(findTestObject('CRM_/Fitternity_/Cross_Icon'))
 
 WebUI.back()
 

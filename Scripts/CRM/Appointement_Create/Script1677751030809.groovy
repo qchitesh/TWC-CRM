@@ -19,49 +19,55 @@ import org.openqa.selenium.Keys as Keys
 
 CustomKeywords.'login.Login_CRM.userLogin'()
 
-WebUI.click(findTestObject('Appointment_/Appointment'))
+WebUI.delay(2)
 
-WebUI.click(findTestObject('Appointment_/View_All'))
+WebUI.click(findTestObject('CRM_/CRM_Login/Open_Slider'), FailureHandling.OPTIONAL)
 
-WebUI.click(findTestObject('Appointment_/Create_Appointment_/Create_Appointment'), FailureHandling.STOP_ON_FAILURE)
+WebUI.click(findTestObject('CRM_/Appointment_/Appointment'))
 
-WebUI.setText(findTestObject('Appointment_/Create_Appointment_/Search_User_'), 'hitesh.chandankar@truworth.com')
+WebUI.click(findTestObject('CRM_/Appointment_/View_All'))
 
-WebUI.click(findTestObject('Appointment_/Search_Button'))
+WebUI.click(findTestObject('CRM_/Appointment_/Create_Appointment_/Create_Appointment'), FailureHandling.STOP_ON_FAILURE)
+
+WebUI.setText(findTestObject('CRM_/Appointment_/Create_Appointment_/Search_User_'), 'hitesh.chandankar@truworth.com')
+
+WebUI.click(findTestObject('CRM_/Appointment_/Search_Button'))
 
 WebUI.delay(10)
 
-if (WebUI.verifyElementPresent(findTestObject('Object Repository/Appointement_Create/Verify_User'), 5)) {
+if (WebUI.verifyElementPresent(findTestObject('Object Repository/CRM_/Appointement_Create/Verify_User'), 5)) {
     System.out.println('User is verified')
 } else {
     System.out.println('User is not verified')
+	assert false
 }
 
 WebUI.delay(2)
 
-WebUI.setText(findTestObject('Object Repository/Appointement_Create/Search_Pacakage'), 'covid')
+WebUI.setText(findTestObject('Object Repository/CRM_/Appointement_Create/Search_Pacakage'), 'covid')
 
 WebUI.delay(2)
 
-WebUI.click(findTestObject('Appointement_Create/Select_DropDown_Package'))
+WebUI.click(findTestObject('CRM_/Appointement_Create/Select_DropDown_Package'))
 
 WebUI.delay(2)
 
-WebUI.click(findTestObject('Appointement_Create/Self_'))
+WebUI.click(findTestObject('CRM_/Appointement_Create/Self_'))
 
-WebUI.click(findTestObject('Appointement_Create/Address_'))
+WebUI.click(findTestObject('CRM_/Appointement_Create/Address_'))
 
-WebUI.click(findTestObject('Appointement_Create/Date_'))
+WebUI.click(findTestObject('CRM_/Appointement_Create/Date_'))
 
-WebUI.click(findTestObject('Appointement_Create/Select_Date'))
+WebUI.click(findTestObject('CRM_/Appointement_Create/Select_Date'))
 
-WebUI.click(findTestObject('Appointement_Create/Time_'))
+WebUI.click(findTestObject('CRM_/Appointement_Create/Time_'))
 
-WebUI.click(findTestObject('Appointement_Create/Select_Time'))
+WebUI.click(findTestObject('CRM_/Appointement_Create/Select_Time'))
 
-WebUI.click(findTestObject('Appointement_Create/Submit'))
+WebUI.click(findTestObject('CRM_/Appointement_Create/Submit'))
 
-if (WebUI.verifyTextPresent('Hitesh Chandankar', true)) {
+if (WebUI.verifyTextPresent('Hitesh Chandankar', true)) 
+	{
     System.out.println('User Verified')
 } else {
     System.out.println('User not verified')

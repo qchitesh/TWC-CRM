@@ -25,33 +25,32 @@ WebUI.navigateToUrl(GlobalVariable.url)
 
 WebUI.delay(5)
 
-//WebUI.click(findTestObject('CRM__/CRM_Login/Page_CRM - The Wellness Corner/button_Log in'))
+//WebUI.click(findTestObject('CRM_/CRM__/CRM_Login/Page_CRM - The Wellness Corner/button_Log in'))
 //
 //WebUI.delay(2)
 //
-//alert = WebUI.getText(findTestObject('CRM_Login/Alert_Login'))
+//alert = WebUI.getText(findTestObject('CRM_/CRM_Login/Alert_Login'))
 //
 //WebUI.delay(2)
 //
 //System.out.println(alert)
 //
-//alert07 = WebUI.getText(findTestObject('CRM_Login/Alert_password'))
+//alert07 = WebUI.getText(findTestObject('CRM_/CRM_Login/Alert_password'))
 //
 //System.out.println(alert07)
 //
 //WebUI.delay(5)
-
-WebUI.setText(findTestObject('CRM_Login/Login_'), 'admin')
-
-WebUI.delay(2)
-
-WebUI.setText(findTestObject('CRM_Login/Password_'), 'Truworth@!@#')
+WebUI.setText(findTestObject('CRM_/CRM_Login/Login_'), 'admin')
 
 WebUI.delay(2)
 
-WebUI.click(findTestObject('CRM_Login/Submit_Button'))
+WebUI.setText(findTestObject('CRM_/CRM_Login/Password_'), 'Truworth@!@#')
 
-if (WebUI.verifyElementPresent(findTestObject('CRM_Login/Verify_Sussefully_Login'), 5)) {
+WebUI.delay(2)
+
+WebUI.click(findTestObject('CRM_/CRM_Login/Submit_Button'))
+
+if (WebUI.verifyElementPresent(findTestObject('CRM_/CRM_Login/Verify_Sussefully_Login'), 5)) {
     System.out.println('Test case pass')
 } else {
     System.out.println('Test case fail')

@@ -19,37 +19,39 @@ import org.openqa.selenium.Keys as Keys
 
 CustomKeywords.'login.Login_CRM.userLogin'()
 
-WebUI.click(findTestObject('LAB_/Lab_'))
+WebUI.click(findTestObject('CRM_/CRM_Login/Open_Slider'), FailureHandling.OPTIONAL)
 
-WebUI.click(findTestObject('Lab_Network/Lab_Network'))
+WebUI.click(findTestObject('CRM_/LAB_/Lab_'))
 
-WebUI.click(findTestObject('Lab_Network/Add_Network'))
+WebUI.click(findTestObject('CRM_/Lab_Network/Lab_Network'))
 
-WebUI.setText(findTestObject('Lab_Network/Network_Name'), 'DonteBlood')
+WebUI.click(findTestObject('CRM_/Lab_Network/Add_Network'))
 
-WebUI.click(findTestObject('Lab_Network/Submit_Button'))
+WebUI.setText(findTestObject('CRM_/Lab_Network/Network_Name'), 'DonteBlood')
+
+WebUI.click(findTestObject('CRM_/Lab_Network/Submit_Button'))
 
 WebUI.delay(5)
 
-WebUI.click(findTestObject('Lab_Network/Eye-Symbol_Lab'))
+WebUI.click(findTestObject('CRM_/Lab_Network/Eye-Symbol_Lab'))
 
-WebUI.click(findTestObject('Lab_Network/Add_Lab'))
+WebUI.click(findTestObject('CRM_/Lab_Network/Add_Lab'))
 
-WebUI.setText(findTestObject('Lab_Network/Lab_Name'), 'new testing lab')
+WebUI.setText(findTestObject('CRM_/Lab_Network/Lab_Name'), 'new testing lab')
 
-WebUI.click(findTestObject('Lab_Network/Lab_DropDown'), FailureHandling.STOP_ON_FAILURE)
+WebUI.click(findTestObject('CRM_/Lab_Network/Lab_DropDown'), FailureHandling.STOP_ON_FAILURE)
 
-WebUI.click(findTestObject('Lab_Network/Submit_Button_2'))
+WebUI.click(findTestObject('CRM_/Lab_Network/Submit_Button_2'))
 
 WebUI.delay(2)
 
-if(WebUI.verifyTextPresent('New testing lab', true))
-{
-	System.out.println("Test case pass")
+if (WebUI.verifyTextPresent('New testing lab', true)) {
+    System.out.println('Test case pass')
+} else {
+    System.out.println('Test case fail')
+
+    assert false
 }
-else
-{
-	System.out.println("Test case fail")
-	assert false
-}
- WebUI.closeBrowser()
+
+WebUI.closeBrowser()
+

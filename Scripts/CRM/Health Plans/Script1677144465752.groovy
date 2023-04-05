@@ -19,17 +19,23 @@ import org.openqa.selenium.Keys as Keys
 
 CustomKeywords.'login.Login_CRM.userLogin'()
 
-WebUI.click(findTestObject('Health_Plans/Health_Plan'))
+WebUI.delay(2)
 
-WebUI.click(findTestObject('Health_Plans/Enroll_User_To'))
+WebUI.click(findTestObject('CRM_/CRM_Login/Open_Slider'), FailureHandling.OPTIONAL)
 
-WebUI.setText(findTestObject('Health_Plans/Enter_Email'), 'hitesh@truworth.com')
+WebUI.delay(2)
 
-WebUI.click(findTestObject('Health_Plans/Select_Plans'), FailureHandling.STOP_ON_FAILURE)
+WebUI.click(findTestObject('CRM_/Health_Plans/Health_Plan'))
 
-WebUI.click(findTestObject('Health_Plans/Select_Plans_'))
+WebUI.click(findTestObject('CRM_/Health_Plans/Enroll_User_To'))
 
-WebUI.click(findTestObject('Health_Plans/Submit_Button'))
+WebUI.setText(findTestObject('CRM_/Health_Plans/Enter_Email'), 'hitesh@truworth.com')
+
+WebUI.click(findTestObject('CRM_/Health_Plans/Select_Plans'), FailureHandling.STOP_ON_FAILURE)
+
+WebUI.click(findTestObject('CRM_/Health_Plans/Select_Plans_'))
+
+WebUI.click(findTestObject('CRM_/Health_Plans/Submit_Button'))
 
 WebUI.closeBrowser()
 

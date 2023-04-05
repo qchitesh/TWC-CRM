@@ -29,11 +29,11 @@ if (WebUI.verifyTextPresent('Appointments by Status', false)) {
 
 WebUI.delay(5)
 
-WebUI.click(findTestObject('DashBoard_/Confirmed_Appointment'))
+WebUI.click(findTestObject('CRM_/DashBoard_/Confirmed_Appointment'))
 
 WebUI.delay(4)
 
-WebUI.click(findTestObject('DashBoard_/DashBoard'))
+WebUI.click(findTestObject('CRM_/DashBoard_/DashBoard'))
 
 WebUI.closeBrowser()
 

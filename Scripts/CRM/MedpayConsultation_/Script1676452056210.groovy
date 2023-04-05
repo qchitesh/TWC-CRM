@@ -19,11 +19,13 @@ import org.openqa.selenium.Keys as Keys
 
 CustomKeywords.'login.Login_CRM.userLogin'()
 
-WebUI.click(findTestObject('MedpayConsultations_/MedpayConsultations'))
+WebUI.click(findTestObject('CRM_/CRM_Login/Open_Slider'), FailureHandling.OPTIONAL)
 
-WebUI.setText(findTestObject('MedpayConsultations_/Search_Tab_'), 'SPONSORED-117-45243')
+WebUI.click(findTestObject('CRM_/MedpayConsultations_/MedpayConsultations'))
 
-WebUI.click(findTestObject('MedpayConsultations_/Serach_Icon'))
+WebUI.setText(findTestObject('CRM_/MedpayConsultations_/Search_Tab_'), 'SPONSORED-117-45243')
+
+WebUI.click(findTestObject('CRM_/MedpayConsultations_/Serach_Icon'))
 
 if (WebUI.verifyTextPresent('Medpay Appointments', true)) {
     System.out.println('Test case pass')
@@ -33,7 +35,7 @@ if (WebUI.verifyTextPresent('Medpay Appointments', true)) {
     assert false
 }
 
-WebUI.click(findTestObject('Object Repository/MedpayConsultations_/View_Option'))
+WebUI.click(findTestObject('Object Repository/CRM_/MedpayConsultations_/View_Option'))
 
 if (WebUI.verifyTextPresent('Medpay Appointment Details', true)) {
     System.out.println('Test case pass')
@@ -43,9 +45,9 @@ if (WebUI.verifyTextPresent('Medpay Appointment Details', true)) {
     assert false
 }
 
-WebUI.click(findTestObject('Object Repository/MedpayConsultations_/Presription_Tab'))
+WebUI.click(findTestObject('Object Repository/CRM_/MedpayConsultations_/Presription_Tab'))
 
-WebUI.click(findTestObject('Object Repository/MedpayConsultations_/Open_Priscription'))
+WebUI.click(findTestObject('Object Repository/CRM_/MedpayConsultations_/Open_Priscription'))
 
 WebUI.delay(5)
 
@@ -53,27 +55,27 @@ WebUI.switchToWindowIndex(0)
 
 WebUI.delay(5)
 
-WebUI.click(findTestObject('MedpayConsultations_/Cross_PDF_Icon'))
+WebUI.click(findTestObject('CRM_/MedpayConsultations_/Cross_PDF_Icon'))
 
 WebUI.delay(5)
 
 WebUI.back()
 
-WebUI.click(findTestObject('MedpayConsultations_/Clear_Arrow'))
+WebUI.click(findTestObject('CRM_/MedpayConsultations_/Clear_Arrow'))
 
 WebUI.delay(0)
 
-WebUI.click(findTestObject('MedpayConsultations_/Page_3'))
+WebUI.click(findTestObject('CRM_/MedpayConsultations_/Page_3'))
 
 WebUI.delay(5)
 
-WebUI.setText(findTestObject('MedpayConsultations_/SearchTab_3_Page'), 'SPONSORED-104-94047')
+WebUI.setText(findTestObject('CRM_/MedpayConsultations_/SearchTab_3_Page'), 'SPONSORED-104-94047')
 
 WebUI.delay(5)
 
-WebUI.click(findTestObject('MedpayConsultations_/Search_Icon_3'))
+WebUI.click(findTestObject('CRM_/MedpayConsultations_/Search_Icon_3'))
 
-WebUI.click(findTestObject('MedpayConsultations_/View_Option'))
+WebUI.click(findTestObject('CRM_/MedpayConsultations_/View_Option'))
 
 WebUI.closeBrowser()
 

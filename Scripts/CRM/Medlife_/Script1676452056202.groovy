@@ -21,23 +21,23 @@ CustomKeywords.'login.Login_CRM.userLogin'()
 
 WebUI.delay(2)
 
-WebUI.click(findTestObject('Medlife_/Medlife_'))
+WebUI.click(findTestObject('CRM_/Medlife_/Medlife_'))
 
 WebUI.delay(2)
 
-WebUI.click(findTestObject('Medlife_/Page_Change'))
+WebUI.click(findTestObject('CRM_/Medlife_/Page_Change'))
 
 WebUI.delay(5)
 
-WebUI.scrollToElement(findTestObject('Medlife_/View'), 5)
+WebUI.scrollToElement(findTestObject('CRM_/Medlife_/View'), 5)
 
 WebUI.delay(2)
 
-WebUI.click(findTestObject('Medlife_/View'))
+WebUI.click(findTestObject('CRM_/Medlife_/View'))
 
 WebUI.delay(2)
 
-test1 = WebUI.getText(findTestObject('Medlife_/Title_Verify'))
+test1 = WebUI.getText(findTestObject('CRM_/Medlife_/Title_Verify'))
 
 System.out.println(test1)
 

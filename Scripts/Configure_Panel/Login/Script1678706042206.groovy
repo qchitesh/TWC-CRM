@@ -23,5 +23,29 @@ WebUI.maximizeWindow()
 
 WebUI.navigateToUrl('https://dev-config.thewellnesscorner.com/')
 
-WebUI.setText(findTestObject(null), '')
+WebUI.setText(findTestObject('Configure_Panel_/Login_'), 'admin')
 
+WebUI.setText(findTestObject('Configure_Panel_/Password_'), 'Truworth@!@#')
+
+WebUI.click(findTestObject('Configure_Panel_/Log_IN'))
+
+WebUI.setText(findTestObject('Configure_Panel_/Search_Client'), 'Client20')
+
+WebUI.click(findTestObject('Configure_Panel_/Search_Button'))
+
+WebUI.delay(2)
+
+WebUI.click(findTestObject('Configure_Panel_/Edit_Client'))
+
+if(WebUI.verifyElementPresent(findTestObject('Configure_Panel_/Verify_Client_Edit'), 3))
+{
+	System.out.println("Test case pass")
+}
+
+else
+{
+	System.out.println("Test case fail")
+	assert false
+}
+
+WebUI.closeBrowser()

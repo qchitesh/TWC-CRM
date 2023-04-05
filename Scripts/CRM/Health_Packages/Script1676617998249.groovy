@@ -25,11 +25,17 @@ import org.openqa.selenium.firefox.FirefoxDriver as FirefoxDriver
 
 CustomKeywords.'login.Login_CRM.userLogin'()
 
-WebUI.click(findTestObject('Health_Packages/Health_Package'))
+WebUI.delay(2)
 
-WebUI.click(findTestObject('Health_Packages/Create_Pacake'))
+WebUI.click(findTestObject('CRM_/CRM_Login/Open_Slider'), FailureHandling.OPTIONAL)
 
-if (WebUI.verifyElementPresent(findTestObject('Health_Packages/Title_Verify'), 5)) {
+WebUI.delay(2)
+
+WebUI.click(findTestObject('CRM_/Health_Packages/Health_Package'))
+
+WebUI.click(findTestObject('CRM_/Health_Packages/Create_Pacake'))
+
+if (WebUI.verifyElementPresent(findTestObject('CRM_/Health_Packages/Title_Verify'), 5)) {
     System.out.println('Test case pass')
 } else {
     System.out.println('Test case fail')
@@ -37,47 +43,47 @@ if (WebUI.verifyElementPresent(findTestObject('Health_Packages/Title_Verify'), 5
     assert false
 }
 
-WebUI.setText(findTestObject('Health_Packages/Enter_name'), 'ThinkPositive')
+WebUI.setText(findTestObject('CRM_/Health_Packages/Enter_name'), 'ThinkPositive')
 
-WebUI.setText(findTestObject('Health_Packages/Enter_Code'), '0088')
+WebUI.setText(findTestObject('CRM_/Health_Packages/Enter_Code'), '0088')
 
-WebUI.click(findTestObject('Health_Packages/Enter_Gender'))
+WebUI.click(findTestObject('CRM_/Health_Packages/Enter_Gender'))
 
-WebUI.click(findTestObject('Health_Packages/Gender_Male'))
+WebUI.click(findTestObject('CRM_/Health_Packages/Gender_Male'))
 
-WebUI.setText(findTestObject('Health_Packages/Enter_Age'), '25')
+WebUI.setText(findTestObject('CRM_/Health_Packages/Enter_Age'), '25')
 
-WebUI.click(findTestObject('Health_Packages/Risk_Catagoery'))
+WebUI.click(findTestObject('CRM_/Health_Packages/Risk_Catagoery'))
 
-WebUI.click(findTestObject('Health_Packages/Select_Risk'))
+WebUI.click(findTestObject('CRM_/Health_Packages/Select_Risk'))
 
-WebUI.setText(findTestObject('Health_Packages/Fasting_required'), '6 hr')
+WebUI.setText(findTestObject('CRM_/Health_Packages/Fasting_required'), '6 hr')
 
-WebUI.setText(findTestObject('Health_Packages/Enter_Time'), '11:30 AM')
+WebUI.setText(findTestObject('CRM_/Health_Packages/Enter_Time'), '11:30 AM')
 
-WebUI.setText(findTestObject('Health_Packages/Parameter'), '18')
+WebUI.setText(findTestObject('CRM_/Health_Packages/Parameter'), '18')
 
-WebUI.setText(findTestObject('Health_Packages/MRP_'), '1999')
+WebUI.setText(findTestObject('CRM_/Health_Packages/MRP_'), '1999')
 
-WebUI.setText(findTestObject('Health_Packages/Selling_Price'), '1599')
+WebUI.setText(findTestObject('CRM_/Health_Packages/Selling_Price'), '1599')
 
-WebUI.setText(findTestObject('Health_Packages/Corporate_Price'), '1299')
+WebUI.setText(findTestObject('CRM_/Health_Packages/Corporate_Price'), '1299')
 
-WebUI.setText(findTestObject('Health_Packages/Platinum_Price'), '999')
+WebUI.setText(findTestObject('CRM_/Health_Packages/Platinum_Price'), '999')
 
-WebUI.click(findTestObject('Health_Packages/Home_Collection'))
+WebUI.click(findTestObject('CRM_/Health_Packages/Home_Collection'))
 
-WebUI.scrollToElement(findTestObject('Health_Packages/Time_Slot'), 5)
+WebUI.scrollToElement(findTestObject('CRM_/Health_Packages/Time_Slot'), 5)
 
 WebUI.delay(10)
 
-WebUI.setText(findTestObject('Health_Packages/Time_Slot'), 'Before 10AM')
+WebUI.setText(findTestObject('CRM_/Health_Packages/Time_Slot'), 'Before 10AM')
 
-WebUI.setText(findTestObject('Health_Packages/Appointment_End_Time'), '2 days before')
+WebUI.setText(findTestObject('CRM_/Health_Packages/Appointment_End_Time'), '2 days before')
 
-WebUI.click(findTestObject('Health_Packages/Retail_Button'))
+WebUI.click(findTestObject('CRM_/Health_Packages/Retail_Button'))
 
-WebUI.setText(findTestObject('Health_Packages/Test_Package'), 'Truworth_Test')
+WebUI.setText(findTestObject('CRM_/Health_Packages/Test_Package'), 'Truworth_Test')
 
 Robot robot = new Robot()
 
@@ -87,13 +93,13 @@ robot.keyPress(KeyEvent.VK_ENTER)
 
 robot.keyRelease(KeyEvent.VK_ENTER)
 
-WebUI.setText(findTestObject('Health_Packages/Total_Parameter'), '22')
+WebUI.setText(findTestObject('CRM_/Health_Packages/Total_Parameter'), '22')
 
-WebUI.setText(findTestObject('Health_Packages/Sub_Child'), 'TruSoft')
+WebUI.setText(findTestObject('CRM_/Health_Packages/Sub_Child'), 'TruSoft')
 
-WebUI.setText(findTestObject('Health_Packages/Description'), 'Please come 30 min before appointment time')
+WebUI.setText(findTestObject('CRM_/Health_Packages/Description'), 'Please come 30 min before appointment time')
 
-if (WebUI.verifyElementClickable(findTestObject('Health_Packages/Submit_Button'))) {
+if (WebUI.verifyElementClickable(findTestObject('CRM_/Health_Packages/Submit_Button'))) {
     System.out.println('Test case pass')
 } else {
     System.out.println('Test case fail')
@@ -101,7 +107,7 @@ if (WebUI.verifyElementClickable(findTestObject('Health_Packages/Submit_Button')
     assert false
 }
 
-WebUI.click(findTestObject('Object Repository/Health_Packages/Submit_Button'))
+WebUI.click(findTestObject('Object Repository/CRM_/Health_Packages/Submit_Button'))
 
 WebUI.closeBrowser()
 

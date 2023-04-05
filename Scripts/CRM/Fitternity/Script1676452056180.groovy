@@ -21,17 +21,21 @@ CustomKeywords.'login.Login_CRM.userLogin'()
 
 WebUI.delay(5)
 
-WebUI.click(findTestObject('Fitternity_/Fitternity'))
+WebUI.click(findTestObject('CRM_/CRM_Login/Open_Slider'), FailureHandling.OPTIONAL)
+
+WebUI.delay(2)
+
+WebUI.click(findTestObject('CRM_/Fitternity_/Fitternity'))
 
 WebUI.delay(5)
 
-WebUI.setText(findTestObject('Fitternity_/Serach_Tab'), 'lokesh20@mailinator.com')
+WebUI.setText(findTestObject('CRM_/Fitternity_/Serach_Tab'), 'lokesh20@mailinator.com')
 
-WebUI.click(findTestObject('Fitternity_/Search_Icon'))
+WebUI.click(findTestObject('CRM_/Fitternity_/Search_Icon'))
 
-WebUI.click(findTestObject('Fitternity_/eye_Icon'))
+WebUI.click(findTestObject('CRM_/Fitternity_/eye_Icon'))
 
-if (WebUI.verifyElementPresent(findTestObject('Fitternity_/Verify_Element'), 5)) {
+if (WebUI.verifyElementPresent(findTestObject('CRM_/Fitternity_/Verify_Element'), 5)) {
     System.out.println('Test case pass')
 } else {
     System.out.println('Test case fail')
@@ -39,7 +43,7 @@ if (WebUI.verifyElementPresent(findTestObject('Fitternity_/Verify_Element'), 5))
     assert false
 }
 
-WebUI.click(findTestObject('Object Repository/Fitternity_/Cross_Icon'))
+WebUI.click(findTestObject('Object Repository/CRM_/Fitternity_/Cross_Icon'))
 
 WebUI.back()
 

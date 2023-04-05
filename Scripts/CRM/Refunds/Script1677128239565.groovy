@@ -19,13 +19,19 @@ import org.openqa.selenium.Keys as Keys
 
 CustomKeywords.'login.Login_CRM.userLogin'()
 
-WebUI.click(findTestObject('Refunds/Refunds'))
+WebUI.delay(5)
 
-WebUI.click(findTestObject('Refunds/Refund Requests'))
+WebUI.click(findTestObject('CRM_/CRM_Login/Open_Slider'), FailureHandling.OPTIONAL)
 
-WebUI.setText(findTestObject('Refunds/Search_Box'), 'TWC-127-58A91P')
+WebUI.delay(5)
 
-WebUI.click(findTestObject('Refunds/Search_Button'))
+WebUI.click(findTestObject('CRM_/Refunds/Refunds'))
+
+WebUI.click(findTestObject('CRM_/Refunds/Refund Requests'))
+
+WebUI.setText(findTestObject('CRM_/Refunds/Search_Box'), 'TWC-127-58A91P')
+
+WebUI.click(findTestObject('CRM_/Refunds/Search_Button'))
 
 if (WebUI.verifyTextPresent('TWC-127-58A91P', true)) {
     System.out.println('Test case pass')
@@ -34,9 +40,9 @@ if (WebUI.verifyTextPresent('TWC-127-58A91P', true)) {
     assert false
 }
 
-WebUI.click(findTestObject('Refunds/View_'))
+WebUI.click(findTestObject('CRM_/Refunds/View_'))
 
-if (WebUI.verifyElementPresent(findTestObject('Refunds/Check_Status'), 5)) {
+if (WebUI.verifyElementPresent(findTestObject('CRM_/Refunds/Check_Status'), 5)) {
     System.out.println('Test case pass')
 } else {
     System.out.println('Test case pass')
@@ -52,41 +58,45 @@ not_run: WebUI.back()
 
 WebUI.delay(2)
 
-WebUI.click(findTestObject('Refunds/Refunds'))
+WebUI.click(findTestObject('CRM_/CRM_Login/Open_Slider'), FailureHandling.OPTIONAL)
 
 WebUI.delay(2)
 
-WebUI.click(findTestObject('Refunds/Submit_Request'))
-
-WebUI.setText(findTestObject('Refunds/Search_Box'), 'TWC-298-4RBQEP')
+WebUI.click(findTestObject('CRM_/Refunds/Refunds'))
 
 WebUI.delay(2)
 
-WebUI.click(findTestObject('Refunds/Search_Button_2'))
+WebUI.click(findTestObject('CRM_/Refunds/Submit_Request'))
 
-not_run: WebUI.click(findTestObject('Refunds/View_'))
+WebUI.setText(findTestObject('CRM_/Refunds/Search_Box'), 'TWC-298-4RBQEP')
+
+WebUI.delay(2)
+
+WebUI.click(findTestObject('CRM_/Refunds/Search_Button_2'))
+
+not_run: WebUI.click(findTestObject('CRM_/Refunds/View_'))
 
 not_run: WebUI.delay(5)
 
-not_run: WebUI.scrollToElement(findTestObject('Refunds/Refunds_Title'), 5)
+not_run: WebUI.scrollToElement(findTestObject('CRM_/Refunds/Refunds_Title'), 5)
 
 WebUI.delay(5)
 
-WebUI.click(findTestObject('Refunds/Issue_Refund'))
+WebUI.click(findTestObject('CRM_/Refunds/Issue_Refund'))
 
-WebUI.setText(findTestObject('Refunds/Amount_Tab'), '300')
+WebUI.setText(findTestObject('CRM_/Refunds/Amount_Tab'), '300')
 
-WebUI.setText(findTestObject('Refunds/Reason_Tab'), 'Personal Resaon')
+WebUI.setText(findTestObject('CRM_/Refunds/Reason_Tab'), 'Personal Resaon')
 
-WebUI.click(findTestObject('Refunds/Submit_Button'))
+WebUI.click(findTestObject('CRM_/Refunds/Submit_Button'))
 
 WebUI.delay(1)
 
-if (WebUI.verifyElementPresent(findTestObject('Refunds/Subnit_Verificatin'), 5)) {
+if (WebUI.verifyElementPresent(findTestObject('CRM_/Refunds/Subnit_Verificatin'), 5)) {
     System.out.println('User amount are already refunded')
 }
 
-WebUI.click(findTestObject('Refunds/Cancel_Button'))
+WebUI.click(findTestObject('CRM_/Refunds/Cancel_Button'))
 
 WebUI.closeBrowser()
 

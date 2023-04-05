@@ -19,23 +19,29 @@ import org.openqa.selenium.Keys as Keys
 
 CustomKeywords.'login.Login_CRM.userLogin'()
 
-WebUI.click(findTestObject('Appointment_/Appointment'))
+WebUI.delay(5)
+
+WebUI.click(findTestObject('CRM_/CRM_Login/Open_Slider'), FailureHandling.OPTIONAL)
+
+WebUI.delay(5)
+
+WebUI.click(findTestObject('CRM_/Appointment_/Appointment'))
 
 WebUI.delay(2)
 
-WebUI.click(findTestObject('Appointment_/View_All'))
+WebUI.click(findTestObject('CRM_/Appointment_/View_All'))
 
 WebUI.delay(2)
 
-WebUI.setText(findTestObject('Appointment_/Serach_Email'), 'hitesh.chandankar@truworth.com')
+WebUI.setText(findTestObject('CRM_/Appointment_/Serach_Email'), 'hitesh.chandankar@truworth.com')
 
 WebUI.delay(2)
 
-WebUI.click(findTestObject('Appointment_/Search_Button'))
+WebUI.click(findTestObject('CRM_/Appointment_/Search_Button'))
 
 WebUI.delay(2)
 
-WebUI.click(findTestObject('Appointment_/Create_Appointment_/Create_Appointment'))
+WebUI.click(findTestObject('CRM_/Appointment_/Create_Appointment_/Create_Appointment'))
 
 if (WebUI.verifyTextPresent('Create Appointment', false)) {
     System.out.println('Test case pass')
@@ -47,11 +53,11 @@ if (WebUI.verifyTextPresent('Create Appointment', false)) {
 
 WebUI.delay(2)
 
-WebUI.setText(findTestObject('Appointment_/Enter_Email'), 'hitesh@gmail.com')
+WebUI.setText(findTestObject('CRM_/Appointment_/Enter_Email'), 'hitesh@gmail.com')
 
 WebUI.delay(2)
 
-if (WebUI.click(findTestObject('Appointment_/Search_New_User'))) {
+if (WebUI.click(findTestObject('CRM_/Appointment_/Search_New_User'))) {
     System.out.println('Test case pass')
 }
 
@@ -63,63 +69,63 @@ if (WebUI.click(findTestObject('Appointment_/Search_New_User'))) {
 //}
 WebUI.delay(2)
 
-WebUI.click(findTestObject('Appointment_/Yes_New_User'))
+WebUI.click(findTestObject('CRM_/Appointment_/Yes_New_User'))
 
 WebUI.delay(2)
 
-WebUI.setText(findTestObject('Appointment_/FirstName_NewUser'), 'Hitesh')
+WebUI.setText(findTestObject('CRM_/Appointment_/FirstName_NewUser'), 'Hitesh')
 
 WebUI.delay(2)
 
-WebUI.setText(findTestObject('Appointment_/LastName_NewUser'), 'Wani')
+WebUI.setText(findTestObject('CRM_/Appointment_/LastName_NewUser'), 'Wani')
 
 WebUI.delay(2)
 
-WebUI.click(findTestObject('Appointment_/Gender_Male'))
+WebUI.click(findTestObject('CRM_/Appointment_/Gender_Male'))
 
 WebUI.delay(2)
 
-WebUI.setText(findTestObject('Appointment_/Mobile_Number'), '9766338207')
+WebUI.setText(findTestObject('CRM_/Appointment_/Mobile_Number'), '9766338207')
 
 WebUI.delay(2)
 
-WebUI.click(findTestObject('Appointment_/Date_Birth'))
+WebUI.click(findTestObject('CRM_/Appointment_/Date_Birth'))
 
 WebUI.delay(2)
 
-WebUI.click(findTestObject('Appointment_/Year_Calender'))
+WebUI.click(findTestObject('CRM_/Appointment_/Year_Calender'))
 
 WebUI.delay(2)
 
-WebUI.click(findTestObject('Appointment_/Change_Year'))
+WebUI.click(findTestObject('CRM_/Appointment_/Change_Year'))
 
 WebUI.delay(2)
 
-WebUI.click(findTestObject('Appointment_/Change_Year'))
+WebUI.click(findTestObject('CRM_/Appointment_/Change_Year'))
 
 WebUI.delay(2)
 
-WebUI.click(findTestObject('Appointment_/Change_Year'))
+WebUI.click(findTestObject('CRM_/Appointment_/Change_Year'))
 
 WebUI.delay(2)
 
-WebUI.click(findTestObject('Appointment_/Select_Year'))
+WebUI.click(findTestObject('CRM_/Appointment_/Select_Year'))
 
 WebUI.delay(2)
 
-WebUI.click(findTestObject('Appointment_/Select_Month'))
+WebUI.click(findTestObject('CRM_/Appointment_/Select_Month'))
 
 WebUI.delay(2)
 
-WebUI.click(findTestObject('Appointment_/Select_Date'))
+WebUI.click(findTestObject('CRM_/Appointment_/Select_Date'))
 
 WebUI.delay(2)
 
-WebUI.click(findTestObject('Appointment_/Register_Button_NewUser'))
+WebUI.click(findTestObject('CRM_/Appointment_/Register_Button_NewUser'))
 
 WebUI.delay(2)
 
-if (WebUI.verifyElementPresent(findTestObject('Appointment_/Verify_Account_Alerdy_Created'), 5)) {
+if (WebUI.verifyElementPresent(findTestObject('CRM_/Appointment_/Verify_Account_Alerdy_Created'), 5)) {
     System.out.println('Test case fail')
 } else {
     System.out.println('Test case fail')
@@ -129,25 +135,29 @@ if (WebUI.verifyElementPresent(findTestObject('Appointment_/Verify_Account_Alerd
 
 WebUI.delay(5)
 
-WebUI.click(findTestObject('Appointment_/Cross_NewUser'))
+WebUI.click(findTestObject('CRM_/Appointment_/Cross_NewUser'))
 
-WebUI.click(findTestObject('Object Repository/Appointment_/Back_Arrow_Dashboard'))
-
-WebUI.delay(5)
-
-not_run: WebUI.click(findTestObject('Appointment_/User_Verify'))
-
-WebUI.click(findTestObject('Appointment_/Appointment'))
+WebUI.click(findTestObject('Object Repository/CRM_/Appointment_/Back_Arrow_Dashboard'))
 
 WebUI.delay(2)
 
-WebUI.click(findTestObject('Appointment_/Advanced_Filter'))
+not_run: WebUI.click(findTestObject('CRM_/Appointment_/User_Verify'))
+
+WebUI.click(findTestObject('CRM_/CRM_Login/Open_Slider'), FailureHandling.OPTIONAL)
+
+WebUI.delay(2)
+
+WebUI.click(findTestObject('CRM_/Appointment_/Appointment'))
+
+WebUI.delay(2)
+
+WebUI.click(findTestObject('CRM_/Appointment_/Advanced_Filter'))
 
 WebUI.delay(5)
 
 WebUI.delay(2)
 
-test = WebUI.getText(findTestObject('Appointment_/Title_Adavced_Filter'))
+test = WebUI.getText(findTestObject('CRM_/Appointment_/Title_Adavced_Filter'))
 
 if (test == 'Appointments - Advanced Filters') {
     System.out.println(test)
@@ -157,55 +167,55 @@ if (test == 'Appointments - Advanced Filters') {
     assert false
 }
 
-WebUI.click(findTestObject('Object Repository/Appointment_/Select_Client'))
+WebUI.click(findTestObject('Object Repository/CRM_/Appointment_/Select_Client'))
 
 WebUI.delay(2)
 
-WebUI.click(findTestObject('Appointment_/Select_Client_InDropDown'), FailureHandling.STOP_ON_FAILURE)
+WebUI.click(findTestObject('CRM_/Appointment_/Select_Client_InDropDown'), FailureHandling.STOP_ON_FAILURE)
 
 WebUI.delay(2)
 
-WebUI.click(findTestObject('Appointment_/Collect_Mode'))
+WebUI.click(findTestObject('CRM_/Appointment_/Collect_Mode'))
 
 WebUI.delay(2)
 
-WebUI.click(findTestObject('Appointment_/Collect_Mode_DropDown'))
+WebUI.click(findTestObject('CRM_/Appointment_/Collect_Mode_DropDown'))
 
 WebUI.delay(2)
 
-WebUI.click(findTestObject('Appointment_/Select_Package'))
+WebUI.click(findTestObject('CRM_/Appointment_/Select_Package'))
 
 WebUI.delay(2)
 
-WebUI.click(findTestObject('Appointment_/Select_Package_DropDown'))
+WebUI.click(findTestObject('CRM_/Appointment_/Select_Package_DropDown'))
 
 WebUI.delay(2)
 
-WebUI.click(findTestObject('Appointment_/Select_Status'))
+WebUI.click(findTestObject('CRM_/Appointment_/Select_Status'))
 
 WebUI.delay(2)
 
-WebUI.click(findTestObject('Appointment_/Select_Status_DropDown'))
+WebUI.click(findTestObject('CRM_/Appointment_/Select_Status_DropDown'))
 
 WebUI.delay(2)
 
-WebUI.click(findTestObject('Appointment_/Select_StartDate'))
+WebUI.click(findTestObject('CRM_/Appointment_/Select_StartDate'))
 
 WebUI.delay(2)
 
-WebUI.click(findTestObject('Appointment_/Select_StartDAte_DropDown'))
+WebUI.click(findTestObject('CRM_/Appointment_/Select_StartDAte_DropDown'))
 
 WebUI.delay(2)
 
-WebUI.click(findTestObject('Appointment_/Select_End_Date'))
+WebUI.click(findTestObject('CRM_/Appointment_/Select_End_Date'))
 
 WebUI.delay(2)
 
-WebUI.click(findTestObject('Appointment_/Search_button_Advanced_Filter'))
+WebUI.click(findTestObject('CRM_/Appointment_/Search_button_Advanced_Filter'))
 
 WebUI.delay(2)
 
-WebUI.click(findTestObject('Appointment_/Reset_Advanced_Filter'))
+WebUI.click(findTestObject('CRM_/Appointment_/Reset_Advanced_Filter'))
 
 WebUI.delay(2)
 
