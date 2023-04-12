@@ -7,11 +7,10 @@
    <selectorCollection>
       <entry>
          <key>BASIC</key>
-         <value></value>
       </entry>
       <entry>
          <key>XPATH</key>
-         <value>(//div[@class=&quot;ant-picker-cell-inner&quot; and text()=&quot;28&quot;])[4]</value>
+         <value>(//div[@class=&quot;ant-picker-cell-inner&quot; and text()=&quot;30&quot;])[4]</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>

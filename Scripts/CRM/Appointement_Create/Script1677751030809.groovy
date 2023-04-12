@@ -39,7 +39,8 @@ if (WebUI.verifyElementPresent(findTestObject('Object Repository/CRM_/Appointeme
     System.out.println('User is verified')
 } else {
     System.out.println('User is not verified')
-	assert false
+
+    assert false
 }
 
 WebUI.delay(2)
@@ -58,7 +59,7 @@ WebUI.click(findTestObject('CRM_/Appointement_Create/Address_'))
 
 WebUI.click(findTestObject('CRM_/Appointement_Create/Date_'))
 
-WebUI.click(findTestObject('CRM_/Appointement_Create/Select_Date'))
+WebUI.click(findTestObject('Appointement_Create/Select_Date'))
 
 WebUI.click(findTestObject('CRM_/Appointement_Create/Time_'))
 
@@ -66,8 +67,7 @@ WebUI.click(findTestObject('CRM_/Appointement_Create/Select_Time'))
 
 WebUI.click(findTestObject('CRM_/Appointement_Create/Submit'))
 
-if (WebUI.verifyTextPresent('Hitesh Chandankar', true)) 
-	{
+if (WebUI.verifyTextPresent('Hitesh Chandankar', true)) {
     System.out.println('User Verified')
 } else {
     System.out.println('User not verified')

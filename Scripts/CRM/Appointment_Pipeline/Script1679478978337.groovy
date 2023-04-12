@@ -37,7 +37,7 @@ WebUI.click(findTestObject('CRM_/Appointment_Pipeline/Start_Date'))
 
 WebUI.delay(2)
 
-WebUI.click(findTestObject('CRM_/Appointment_Pipeline/End_Date'))
+WebUI.click(findTestObject('Appointment_Pipeline/End_Date'))
 
 WebUI.delay(2)
 

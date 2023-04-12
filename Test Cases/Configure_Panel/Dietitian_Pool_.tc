@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TestCaseEntity>
    <description></description>
-   <name>Medlife_</name>
+   <name>Dietitian_Pool_</name>
    <tag></tag>
    <comment></comment>
-   <testCaseGuid>c10f6ed8-1383-4c7f-a96c-6a597f7c6b83</testCaseGuid>
+   <testCaseGuid>3e2162ef-78a4-4b07-ad1c-980eccdb3119</testCaseGuid>
 </TestCaseEntity>

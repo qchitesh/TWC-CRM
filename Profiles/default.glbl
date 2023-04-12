@@ -29,4 +29,19 @@
       <initValue>'Please input your Password!'</initValue>
       <name>alertlogin</name>
    </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'lokesh81@mailinator.com'</initValue>
+      <name>Executive_User</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'hitesh08@mailinator.com'</initValue>
+      <name>Finance</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'https://dev-config.thewellnesscorner.com/'</initValue>
+      <name>Config_Url</name>
+   </GlobalVariableEntity>
 </GlobalVariableEntities>

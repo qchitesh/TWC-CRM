@@ -17,31 +17,29 @@ import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 
-CustomKeywords.'login.Login_CRM.userLogin'()
+CustomKeywords.'login.Config_login.userLogin'()
 
-WebUI.delay(2)
+WebUI.back()
 
-WebUI.click(findTestObject('CRM_/Medlife_/Medlife_'))
+WebUI.click(findTestObject('Configure_Panel_/Fitness_Expert_pool_/Fitness_Expert'))
 
-WebUI.delay(2)
+WebUI.click(findTestObject('Configure_Panel_/Fitness_Expert_pool_/Fitness_Expert_Pool'))
 
-WebUI.click(findTestObject('CRM_/Medlife_/Page_Change'))
+WebUI.setText(findTestObject('Configure_Panel_/Doctor_Pool/Enter_Doctor_Pool_Name'), 'Fit_Hit')
 
-WebUI.delay(5)
+WebUI.setText(findTestObject('Configure_Panel_/Doctor_Pool/Pool_Discription_'), 'Do Excerices Daily')
 
-WebUI.scrollToElement(findTestObject('CRM_/Medlife_/View'), 5)
+WebUI.click(findTestObject('Configure_Panel_/Doctor_Pool/Save'))
 
-WebUI.delay(2)
+WebUI.click(findTestObject('Configure_Panel_/Doctor_Pool/Eye_Icon'))
 
-WebUI.click(findTestObject('CRM_/Medlife_/View'))
+WebUI.click(findTestObject('Configure_Panel_/Fitness_Expert_pool_/Add_Fitness'))
 
-WebUI.delay(2)
+WebUI.setText(findTestObject('Configure_Panel_/Doctor_Pool/Select_Expert_'), 'rohit')
 
-test1 = WebUI.getText(findTestObject('CRM_/Medlife_/Title_Verify'))
+WebUI.click(findTestObject('Configure_Panel_/Doctor_Pool/Select_Specility'))
 
-System.out.println(test1)
-
-WebUI.delay(2)
+WebUI.click(findTestObject('Configure_Panel_/Doctor_Pool/Add'))
 
 WebUI.back()
 

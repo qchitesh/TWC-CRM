@@ -26,6 +26,13 @@
       <usingDataBindingAtTestSuiteLevel>true</usingDataBindingAtTestSuiteLevel>
    </testCaseLink>
    <testCaseLink>
+      <guid>d82d3429-90df-4e15-812a-90659b08fc6d</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/CRM/Appointment_Pipeline</testCaseId>
+      <usingDataBindingAtTestSuiteLevel>true</usingDataBindingAtTestSuiteLevel>
+   </testCaseLink>
+   <testCaseLink>
       <guid>aee60d82-c9c8-4c15-b253-97f104180b30</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
